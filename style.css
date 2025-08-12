@@ -1,0 +1,95 @@
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(246, 246, 246);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.div-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    box-shadow: 5px 10px 20px rgba(36, 36, 36, 0.2);
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    background: #f23131;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input {
+    max-width:370px;
+}
+
+button:hover {
+    background: #ff7a7a;
+}
+
+
+.titulo {
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 30px;
+}
+
+#resultado {
+    margin-top: 20px;
+    background: #fd9191;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+#resultado h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#resultado ul {
+    list-style: none;
+}
+
+#resultado li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    #resultado li {
+        font-size: 0.9rem;
+    }
+}

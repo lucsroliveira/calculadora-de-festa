@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora da Festa</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Manifest e cores para PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff4c4c">
+</head>
+<body>
+    <main class="div-container">
+        <h1 class="titulo">Calculadora de Festa</h1>
+        <label for="convidados">Número de convidados:</label>
+        <input type="number" id="convidados" placeholder="Digite aqui" min="1">
+        <button onclick="calcular()">Calcular</button>
+        <section id="resultado"></section>
+    </main>
+
+    <script src="script.js"></script>
+
+
+    <!-- Registro do Sevice Worker-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('Servie Worker registrado com sucesso!')) 
+            .catch(err => console.error('Erro ao registrar Service Worker:', err));
+        }
+    </script>
+</body>
+</html>
